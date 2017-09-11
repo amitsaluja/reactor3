@@ -1,0 +1,73 @@
+!SESSION 2017-09-08 15:59:04.479 -----------------------------------------------
+eclipse.buildId=3.8.2.201610040743-RELEASE-e46
+java.version=1.8.0_111
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.springsource.sts.ide -keyring /Users/amitsaluja/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.springsource.sts.ide -keyring /Users/amitsaluja/.eclipse_keyring
+
+!ENTRY org.eclipse.equinox.p2.publisher 4 0 2017-09-08 15:59:13.127
+!MESSAGE An error occured while parsing advice file: basePath=/Users/amitsaluja/work/software/sts-bundle/STS.app/Contents/Eclipse/features/org.springsource.ide.eclipse.dashboard_3.8.2.201610040540-RELEASE, adviceFilePath=p2.inf.
+!STACK 0
+java.lang.IllegalStateException: bad token: instructions.install.import
+	at org.eclipse.equinox.p2.publisher.AdviceFileParser.parseInstructions(AdviceFileParser.java:329)
+	at org.eclipse.equinox.p2.publisher.AdviceFileParser.parse(AdviceFileParser.java:114)
+	at org.eclipse.equinox.p2.publisher.AdviceFileAdvice.<init>(AdviceFileAdvice.java:78)
+	at org.eclipse.equinox.p2.publisher.eclipse.FeaturesAction.createAdviceFileAdvice(FeaturesAction.java:166)
+	at org.eclipse.equinox.p2.publisher.eclipse.FeaturesAction.generateFeatureIUs(FeaturesAction.java:407)
+	at org.eclipse.equinox.p2.publisher.eclipse.FeaturesAction.perform(FeaturesAction.java:605)
+	at org.eclipse.equinox.internal.provisional.p2.directorywatcher.RepositoryListener.publish(RepositoryListener.java:160)
+	at org.eclipse.equinox.internal.provisional.p2.directorywatcher.RepositoryListener.processFeature(RepositoryListener.java:155)
+	at org.eclipse.equinox.internal.provisional.p2.directorywatcher.RepositoryListener.process(RepositoryListener.java:133)
+	at org.eclipse.equinox.internal.provisional.p2.directorywatcher.RepositoryListener.added(RepositoryListener.java:117)
+	at org.eclipse.equinox.internal.provisional.p2.directorywatcher.DirectoryWatcher.processFile(DirectoryWatcher.java:197)
+	at org.eclipse.equinox.internal.provisional.p2.directorywatcher.DirectoryWatcher.scanDirectories(DirectoryWatcher.java:160)
+	at org.eclipse.equinox.internal.provisional.p2.directorywatcher.DirectoryWatcher.poll(DirectoryWatcher.java:108)
+	at org.eclipse.equinox.internal.p2.extensionlocation.SiteListener.synchronizeRepositories(SiteListener.java:111)
+	at org.eclipse.equinox.internal.p2.extensionlocation.ExtensionLocationArtifactRepository.ensureInitialized(ExtensionLocationArtifactRepository.java:66)
+	at org.eclipse.equinox.internal.p2.extensionlocation.ExtensionLocationArtifactRepository.getProperties(ExtensionLocationArtifactRepository.java:259)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.addRepository(AbstractRepositoryManager.java:129)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:674)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:104)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:100)
+	at org.eclipse.equinox.internal.p2.touchpoint.eclipse.Util.getRunnableRepositories(Util.java:156)
+	at org.eclipse.equinox.internal.p2.touchpoint.eclipse.Util.getAggregatedBundleRepository(Util.java:148)
+	at org.eclipse.equinox.internal.p2.extensionlocation.Activator.getBundlePoolRepository(Activator.java:88)
+	at org.eclipse.equinox.internal.p2.extensionlocation.BundlePoolFilteredListener.<init>(BundlePoolFilteredListener.java:29)
+	at org.eclipse.equinox.internal.p2.extensionlocation.SiteListener.synchronizeRepositories(SiteListener.java:109)
+	at org.eclipse.equinox.internal.p2.extensionlocation.ExtensionLocationMetadataRepository.ensureInitialized(ExtensionLocationMetadataRepository.java:65)
+	at org.eclipse.equinox.internal.p2.extensionlocation.ExtensionLocationMetadataRepository.getProperties(ExtensionLocationMetadataRepository.java:193)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.addRepository(AbstractRepositoryManager.java:129)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.addRepository(MetadataRepositoryManager.java:37)
+	at org.eclipse.equinox.internal.p2.reconciler.dropins.Activator.createExtensionLocationMetadataRepository(Activator.java:81)
+	at org.eclipse.equinox.internal.p2.reconciler.dropins.PlatformXmlListener.synchronizeConfiguration(PlatformXmlListener.java:223)
+	at org.eclipse.equinox.internal.p2.reconciler.dropins.PlatformXmlListener.stopPoll(PlatformXmlListener.java:132)
+	at org.eclipse.equinox.internal.provisional.p2.directorywatcher.DirectoryWatcher.stopPoll(DirectoryWatcher.java:171)
+	at org.eclipse.equinox.internal.provisional.p2.directorywatcher.DirectoryWatcher.poll(DirectoryWatcher.java:109)
+	at org.eclipse.equinox.internal.p2.reconciler.dropins.Activator.watchConfiguration(Activator.java:519)
+	at org.eclipse.equinox.internal.p2.reconciler.dropins.Activator.start(Activator.java:175)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:774)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:767)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:724)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:932)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:309)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:581)
+	at org.eclipse.osgi.container.Module.start(Module.java:449)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1620)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1600)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1571)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1514)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.core.net 1 0 2017-09-08 16:30:52.926
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.jface.text 2 0 2017-09-08 16:30:56.037
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-09-08 16:30:56.040
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
