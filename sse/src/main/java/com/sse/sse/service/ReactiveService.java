@@ -26,7 +26,7 @@ public class ReactiveService {
 		
 	}
 	
-	@GetMapping(produces = MediaType.TEXT_EVENT_STREAM_VALUE,value="/events")
+	@GetMapping(produces = MediaType.APPLICATION_STREAM_JSON_VALUE,value="/events")
 	Flux<Event> eventProducer(){
 		
 		Flux<Event>  eventFlux=Flux.fromStream(Stream.generate(()->new Event(System.currentTimeMillis(),new Date())));
@@ -34,4 +34,7 @@ public class ReactiveService {
 		return Flux.zip(eventFlux,durationFlux).map(Tuple2::getT1);
         
     }
+	
+	
+	
 }
